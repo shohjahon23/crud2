@@ -1,0 +1,15 @@
+extends layout
+block content
+    .container 
+        h1= title
+        .row 
+            each data in db
+                .col-lg-3.col-md-4.col-sm-6.mt-lg-5
+                    .card.text-center
+                        .card-img(dataId= "/add/product/"+data.id) 
+                            img(src= "images/"+ data.img, alt="")
+                        .card-text 
+                            h3= data.title 
+                            .price_box
+                                p.price= data.price 
+                                    |  $ 

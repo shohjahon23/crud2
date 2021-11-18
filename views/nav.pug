@@ -1,0 +1,23 @@
+.navbars
+  nav.navbar.navbar-expand-lg.navbar-light
+    .container
+      a.navbar-brand(href='#') AutoShop 
+      .navbar
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(aria-current='page' href='/') home
+            li.nav-item
+              a.nav-link(aria-current='page' href='/products') products
+            li.nav-item
+              a.nav-link(aria-current='page' href='/add') add product
+            li.nav-item
+              a.nav-link(aria-current='page' href='/register') sign up
+            li.nav-item
+              a.nav-link(aria-current='page' href='/register/login') login
+        form.d-flex
+          input.form-control(type='search' name="search" placeholder='Search' aria-label='Search')
+          button.btn.btn-outline-success(type='submit')
+           i.fa.fa-search

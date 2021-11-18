@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .container 
+    h1= title
+    form( method="POST" enctype="multipart/form-data")
+        .mb-3
+            label.form-label(for='exampleInputEmail1') Add Product
+            if data
+                input.form-control#exampleInputEmail1(type='text' name="title" placeholder="e.g.name"  value= data.title)
+            else 
+                input.form-control#exampleInputEmail1(type='text' name="title" placeholder="e.g.name")
+        .mb-3
+            label.form-label(for='exampleInputPassword1') Price
+            if data
+                input.form-control#exampleInputEmail1(type='number' name="price" placeholder="e.g.price" value= data.price)
+            else 
+                input.form-control#exampleInputEmail1(type='number' name="price" placeholder="e.g.price")                         
+        .mb-3   
+            label.form-label(for='exampleInputEmail1') Gender
+            select.form-control(name='gender')
+                option(value='men') Men
+                option(value='women') Women
+        .mb-3
+            label.form-label(for='exampleInputPassword1') Product details
+            if data
+                textarea(name="comment", cols="30", rows="5").form-control#exampleInputPassword1= data.comment 
+            else 
+                 textarea(name="comment", cols="30", rows="5").form-control#exampleInputPassword1 
+        .mb-3
+            label.form-label(for='exampleInputPassword1') Photo
+            input(type="file" name="img" placeholder="e.g.photo").form-control#exampleInputPassword1
+        button.btn.btn-primary(type='submit') SAVE

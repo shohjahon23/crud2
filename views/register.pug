@@ -1,0 +1,11 @@
+extends layout
+block content
+    .container 
+        h1= title
+        form(action="/register"  method='POST')
+            input(type="text" placeholder="Your Name" name="names").form-control.mt-3.mb-3 
+            input(type="text" placeholder="Your Last Name" name="surname").form-control.mt-3.mb-3 
+            input(type="text" placeholder="Your Login" name="login").form-control.mt-3.mb-3 
+            input(type="password" placeholder="Password" name="password").form-control.mt-3.mb-3 
+            input(type="password" placeholder="Enter Password Again" name="password2").form-control.mt-3.mb-3 
+            button.btn.btn-success Sign Up  

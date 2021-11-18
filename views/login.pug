@@ -1,0 +1,8 @@
+extends layout
+block content
+    .container 
+        h1= title
+        form(action="/register/login"  method='POST') 
+            input(type="text" placeholder="Your Login" name="username").form-control.mt-3.mb-3 
+            input(type="text" placeholder="Password" name="password").form-control.mt-3.mb-3 
+            button.btn.btn-success Sign In 

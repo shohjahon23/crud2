@@ -1,0 +1,26 @@
+extends layout
+block content
+ if data
+    .container 
+        h1= title
+        .row 
+            .about_product.d-flex.justify-content-between.mt-lg-3
+                .col-lg-6.left
+                    .card-imgs 
+                        img(src= "images/"+ data.img, alt="...")
+                .col-lg-5.right
+                    .card-text 
+                        h3= data.title 
+                        .price_box.d-flex
+                            | price :
+                            p.db.price= data.price 
+                                |  $ 
+                        .card_gender.d-flex
+                            | Gender :
+                            p.db.gender= data.gender
+                    .card-comment.d-flex 
+                        | More : 
+                        p.db.comment= data.comment
+                    .buttons
+                        a(href="/add/delete/"+data.id class="btn btn-danger") Delete 
+                        a(href="/add/update/"+data.id class="btn btn-success") Update 
